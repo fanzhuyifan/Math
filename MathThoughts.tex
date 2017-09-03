@@ -1,0 +1,85 @@
+\documentclass[12pt,oneside,reqno]{amsart}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.markings,arrows}
+\usepackage{subcaption}
+\renewcommand{\baselinestretch}{1.05}
+\usepackage{amsmath,amsthm,verbatim,amssymb,amsfonts,amscd, graphicx, float,pgfplots}
+\usepackage{graphics}
+\usepackage{geometry}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\usepackage{thmtools}
+\usepackage{thm-restate}
+\usepackage{hyperref}
+\usepackage[noabbrev]{cleveref}
+\crefname{subsection}{subsection}{subsections}
+
+\newcommand{\simon}[1]{\todo[color=green]{SR: #1}}
+\newcommand{\yifan}[1]{\todo[color=blue!30]{YZ: #1}}
+
+\renewcommand{\epsilon}{\varepsilon}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\captionsetup[subfigure]{labelfont=rm}
+
+
+\begin{document}
+\title{Thoughts, Questions about Math Problems}
+\author{Yifan Zhu}
+\address{Yifan Zhu: Shanghai Foreign Language School, Shanghai 200083, China}
+\email{fanzhuyifan@gmail.com}
+\maketitle
+
+\begin{abstract}
+  This tex file contains my thoughts and questions on math. The content should be organized by category.
+  Here, I should put questions I have asked, useful skills and techniques, and content that would promote my understanding of some subject and remind me when I forget. 
+\end{abstract}
+
+\section{Abstract Algebra}
+\label{sec:aa}
+Contained here are my thoughts related to abstract algebra.
+
+\subsection{Groups}
+\subsubsection{The intuition behind quotient groups.}
+
+A quotient group can be obtained from a group by refusing to differentiate among certain elements of a group. For example, if I view all odd integers as the same, and all even integers as the same, I would get $\mathbb{Z}/2\mathbb{Z}$.
+This kind of ``blurring'' could be conducted on any two elements that are different by some element of some subgroup $H$, or in other words, we consider a coset of $H$, $aH$, as an element of a new group.
+
+\section{Combinatorics}
+\subsection{Game Theory}
+\label{sec:gt}
+\subsubsection{The Asymmetric Colonel Blotto Game}
+
+The paper I wrote with Simon is available on arXiv at \url{https://arxiv.org/abs/1708.07916}.
+The Open Problems section is partially reproduced here:
+
+For example, what would a Nash equilibrium for the game $ACB(1,1,4)$ look like? Or a Nash equilibrium for the game $ACB(1,1,n)$ where $n\ge 5$?
+
+Another problem is to determine how the unique equilibrium payoff varies in the game $ACB(1,t,n)$ as $t$ varies continuously in the general case. As we have shown in \Cref{sec:w2t}, $W_2(t)$ is locally constant and discontinuous as a function of $t$. This is quite a surprising result, as it indicates that there are phase changes in the game $ACB(1,t,2)$ as $t$ changes.
+
+Our partial results  also indicate that $W_3(t)$ is a discontinuous function. Computer simulation of discrete cases also indicates that sometimes it is not differentiable where the function itself is continuous. Maybe the phase changes in this case correspond to discontinuous jumps in the equilibrium strategies.
+Is it possible to find all the critical values of $t$ where these phase changes occur?
+
+Yet another fundamental question left unanswered is the existence of Nash equilibria for the game $ACB(X_A,X_B,n)$ in the general case. We have discussed Nash equilibria in special cases, but we have not given a proof that guarantees the existence of Nash equilibria in the general case.
+
+
+Some further questions:
+\begin{itemize}
+  \item 
+    The discontinuities of $W_n(t)$ or equilibrium strategies, must stem from the fact that the original payoff function is not continuous: it jumps when two players place the same level of force on the same battlefield. How does this discontinuity of the payoff function give rise to discontinuities in $W_n(t)$ and equilibrium strategies? If we change the discontinuity in the payoff function, what different $W_n(t)$ and equilibrium strategies would we get? How would the discontinuities be different?
+\end{itemize}<++>
+\end{document}
+
